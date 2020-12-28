@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewContact">
+
+    <ImageView
+        android:id="@+id/iv_viewContact_imageIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/ibtn_viewContact_phoneCall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_viewContact_name"
+        app:srcCompat="@drawable/icon01_01" />
+
+    <ImageButton
+        android:id="@+id/ibtn_viewContact_phoneCall"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/ibtn_viewContact_email"
+        app:layout_constraintEnd_toStartOf="@+id/ibtn_viewContact_textMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_viewContact_imageIcon"
+        app:srcCompat="@drawable/phone" />
+
+    <ImageButton
+        android:id="@+id/ibtn_viewContact_textMessage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/ibtn_viewContact_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ibtn_viewContact_phoneCall"
+        app:layout_constraintTop_toBottomOf="@+id/iv_viewContact_imageIcon"
+        app:srcCompat="@drawable/imessage" />
+
+    <ImageButton
+        android:id="@+id/ibtn_viewContact_email"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="40dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ibtn_viewContact_phoneCall"
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_viewContact_phoneCall"
+        app:srcCompat="@drawable/letters" />
+
+    <ImageButton
+        android:id="@+id/ibtn_viewContact_map"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="40dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ibtn_viewContact_textMessage"
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_viewContact_textMessage"
+        app:srcCompat="@drawable/gps2" />
+
+    <TextView
+        android:id="@+id/tv_viewContact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/iv_viewContact_imageIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_viewContact_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Call"
+        app:layout_constraintBottom_toTopOf="@+id/ibtn_viewContact_phoneCall"
+        app:layout_constraintEnd_toEndOf="@+id/ibtn_viewContact_phoneCall"
+        app:layout_constraintStart_toStartOf="@+id/ibtn_viewContact_phoneCall" />
+
+    <TextView
+        android:id="@+id/tv_viewContact_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Text"
+        app:layout_constraintBottom_toTopOf="@+id/ibtn_viewContact_textMessage"
+        app:layout_constraintEnd_toEndOf="@+id/ibtn_viewContact_textMessage"
+        app:layout_constraintStart_toStartOf="@+id/ibtn_viewContact_textMessage" />
+
+    <TextView
+        android:id="@+id/tv_viewContact_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/ibtn_viewContact_email"
+        app:layout_constraintEnd_toEndOf="@+id/ibtn_viewContact_email"
+        app:layout_constraintStart_toStartOf="@+id/ibtn_viewContact_email" />
+
+    <TextView
+        android:id="@+id/tv_viewContact_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Map"
+        app:layout_constraintBottom_toTopOf="@+id/ibtn_viewContact_map"
+        app:layout_constraintEnd_toEndOf="@+id/ibtn_viewContact_map"
+        app:layout_constraintStart_toStartOf="@+id/ibtn_viewContact_map" />
+
+    <Button
+        android:id="@+id/btn_viewContact_editContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/panelBackground"
+        android:text="View Info"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_viewContact_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_viewContact_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_viewContact_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
